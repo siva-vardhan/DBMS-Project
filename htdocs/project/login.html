@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Form site</title>
+    <style>
+        form{padding-top: 120px;
+            text-align: center;
+            font-size: 30px;}
+      input{width: 250px;
+            height: 40px;
+            font-size: 30px;}
+    </style>
+</head>
+   <body>
+    <form action="login.php" method="post">
+    Username :  <input type="text" name="user_name"><br><br>
+    Password :  <input type="password" name="pwd"><br> <br>
+    <input type="radio" name="user_type" value="student">student
+    <input type="radio" name="user_type" value="admin">admin
+    <input type="radio" name="user_type" value="staff">staff <br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset"> <br>
+    </form>
+   </body>
+</html>
+

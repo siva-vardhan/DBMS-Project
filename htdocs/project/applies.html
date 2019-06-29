@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	body
+	{
+		padding: 0;
+		margin:0;
+		background-color: lightgreen;
+	}
+
+	header{
+		text-align: center;
+		background-color: forestgreen;
+		color: white;
+		padding: 25px;
+				margin:0;
+
+	}
+	div{
+		text-align: center;
+		font-size: 50px;
+	}
+	</style>
+</head>
+<body>
+	<header>
+	<h1>STUDENT PORTAL</h1>
+	<h2>STUDENT PAGE</h2>
+	<h3 align="right"><?php
+		session_start();
+		echo "Welcome ".$_SESSION['user_id'];
+		?></h3>
+
+	<a href="student.php">Home</a>  | 
+	<a href="myprofile.php">My Profile</a>  |
+	<a href="login.php">Log Out</a>
+	
+
+    </header>
+	
+		<div>
+			<form action="bonafide.php" method="post">
+			<input type="text" name="type" value="Bonafide" readonly style="display:none">
+			<input type="submit" name="enter" value="Bonafide"> <br>
+			</form>
+			<form action="bonafide.php" method="post">
+			<input type="text" name="type" value="Provisional_Grade_Card" readonly style="display:none"> 
+			<input type="submit" name="enter" value="Grade Card"> <br>
+			</form>
+			<form action="bonafide.php" method="post">
+			<input type="text" name="type" value="Fee_Structure" readonly style="display:none">
+			<input type="submit" name="enter" value="Fee Structure"> <br>
+			</form>
+			<form action="bonafide.php" method="post">
+			<input type="text" name="type" value="CGPA_Conversion" readonly style="display:none">
+			<input type="submit" name="enter" value="CGPA Conversion"> <br>
+			</form>
+			<form action="bonafide.php" method="post">
+			<input type="text" name="type" value="Migration_Certificate" readonly style="display:none">
+			<input type="submit" name="enter" value="Migration Certificate"> <br>
+			</form>
+			<form action="bonafide.php" method="post">
+			<input type="text" name="type" value="Transfer_Certificate" readonly style="display:none">
+			<input type="submit" name="enter" value="Transfer Certificate"> <br>
+			</form>
+			<form action="bonafide.php" method="post">
+		    <input type="text" name="type" value="CC_Certificate" readonly style="display:none"> 
+			<input type="submit" name="enter" value="CC Certificate">
+			</form>
+
+			<form action="dup_id.php" method="post">
+				<input type="text" name="type" value="Dup_ID" readonly style="display:none"> 
+				<input type="submit" name="enter" value="Duplicate ID(Fee has to be paid.If already paid,continue">
+				</form>
+	
+			
+		</div>
+	
+</body>
+</html>
