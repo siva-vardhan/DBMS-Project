@@ -50,8 +50,8 @@ if($conn->connect_error){
     die("connection failed:".$conn->connect_error);
 }
 //echo "connected successfully";
-$proc="Completed";
-$sql="select *from document where status='$proc'";
+$comp="Completed";
+$sql="select *from document where status='$comp'";
 $res=$conn->query($sql);
 if($res->num_rows==0){
     echo "no completed documents";
